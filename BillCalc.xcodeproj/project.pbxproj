@@ -51,6 +51,7 @@
 		6AEC1012226F8719005F8B6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6AEC101C226FAB31005F8B6B /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		71969A0F2D8A141600978198 /* BillCalculator */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = BillCalculator; sourceTree = "<group>"; };
+		71969A122D8A38A400978198 /* BillCalculator.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = BillCalculator.xctestplan; path = BillCalculator/Tests/BillCalculator.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +83,7 @@
 		6AEC0FC6226F8639005F8B6B = {
 			isa = PBXGroup;
 			children = (
+				71969A122D8A38A400978198 /* BillCalculator.xctestplan */,
 				71969A0F2D8A141600978198 /* BillCalculator */,
 				6AEC0FEF226F8718005F8B6B /* POS */,
 				6AEC1004226F8719005F8B6B /* POSTests */,

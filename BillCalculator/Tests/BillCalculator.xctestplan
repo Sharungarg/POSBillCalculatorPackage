@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "EF88362F-E7CE-4EE4-BD92-21FB8D8C6B33",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "BillCalculatorTests",
+        "name" : "BillCalculatorTests"
+      }
+    }
+  ],
+  "version" : 1
+}

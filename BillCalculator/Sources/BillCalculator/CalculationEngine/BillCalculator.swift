@@ -34,6 +34,8 @@ public final class BillCalculator {
             return (0, [:])
         }
 
+        let enabledTaxes = taxes.filter { $0.isEnabled }
+        
         // Group items by category for tax calculation
         var categoryTotals: [BillableItemCategory: Decimal] = [:]
         var totalTaxableAmount: Decimal = 0
@@ -50,7 +52,7 @@ public final class BillCalculator {
         var itemizedTaxes: [UUID: Decimal] = [:]
         
         // Calculate tax for each tax type
-        for tax in taxes {
+        for tax in enabledTaxes {
             var taxableAmount: Decimal = 0
             
             if !tax.applicableCategories.isEmpty {
@@ -74,11 +76,14 @@ public final class BillCalculator {
     }
     
     private func calculateDiscounts(preDiscountTaxedTotal: Decimal, discounts: [any Discount]) -> (totalDiscount: Decimal, itemizedDiscounts: [UUID: Decimal]) {
+        
+        let enabledDiscounts = discounts.filter { $0.isEnabled }
+        
         var remainingAmount = preDiscountTaxedTotal
         var totalDiscount: Decimal = 0
         var itemizedDiscounts: [UUID: Decimal] = [:]
         
-        for discount in discounts {
+        for discount in enabledDiscounts {
             let discountAmount: Decimal
             
             switch discount.type {
